@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ecf0f1"
+    tools:context=".ui.ProductIdentity.ProductIdentity">
+
+    <EditText
+        android:id="@+id/productId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Product Id"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/prdctname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Product Name"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="@+id/productId"
+        app:layout_constraintStart_toStartOf="@+id/productId"
+        app:layout_constraintTop_toBottomOf="@+id/productId" />
+
+    <EditText
+        android:id="@+id/prdct_ctgry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Product Category"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="@+id/prdctname"
+        app:layout_constraintStart_toStartOf="@+id/prdctname"
+        app:layout_constraintTop_toBottomOf="@+id/prdctname" />
+
+    <EditText
+        android:id="@+id/prdct_dscrptn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Product Description"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="@+id/prdct_ctgry"
+        app:layout_constraintStart_toStartOf="@+id/prdct_ctgry"
+        app:layout_constraintTop_toBottomOf="@+id/prdct_ctgry" />
+
+    <EditText
+        android:id="@+id/prdct_prc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Product Price"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="@+id/prdct_dscrptn"
+        app:layout_constraintStart_toStartOf="@+id/prdct_dscrptn"
+        app:layout_constraintTop_toBottomOf="@+id/prdct_dscrptn" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_shape"
+        app:layout_constraintEnd_toEndOf="@+id/prdct_prc"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/prdct_prc"
+        app:layout_constraintTop_toBottomOf="@+id/prdct_prc" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginbtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
