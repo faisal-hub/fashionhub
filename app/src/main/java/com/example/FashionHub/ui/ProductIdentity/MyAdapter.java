@@ -26,21 +26,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewhHolder> {
     @Override
     public ViewhHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater=LayoutInflater.from(parent.getContext());
-        View view=inflater.inflate(R.layout.activity_product_identity,parent,false);
+        View view=inflater.inflate(R.layout.item_recycler,parent,false);
        ViewhHolder holder=new ViewhHolder(view);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewhHolder holder, final int position) {
-        int id=datalist.get(position).getProduct_id();
-        String name=datalist.get(position).getProduct_name();
-        String category = datalist.get(position).getProduct_category();
-        String description = datalist.get(position).getProduct_description();
-        int price = datalist.get(position).getProduct_price();
-       // holder.product_category.setText(""+datalist.get(position).getProduct_category());
-       // holder.product_description.setText(""+datalist.get(position).getProduct_description());
-       // holder.product_price.setText(""+datalist.get(position).getProduct_price());
+
+        holder.product_id.setText(""+datalist.get(position).getProduct_id());
+        holder.product_name.setText(""+datalist.get(position).getProduct_name());
+        holder.product_category.setText(""+datalist.get(position).getProduct_category());
+        holder.product_description.setText(""+datalist.get(position).getProduct_description());
+        holder.product_price.setText(""+datalist.get(position).getProduct_price());
         holder.cardViewLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
